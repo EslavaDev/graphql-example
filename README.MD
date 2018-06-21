@@ -1,7 +1,8 @@
 
-##CONSULTAS DE GRAPHQL
+#CONSULTAS DE GRAPHQL
 
-#Querys
+##Querys
+```
 query getSingleCourse($courseId: Int!) {
   course(id: $courseId) {
     title
@@ -16,8 +17,9 @@ query getCourses($topic: String) {
     title
   }
 }
-
-#Query con Fragments
+```
+##Query con Fragments
+```
 query getCoursesFragment($id: Int!, $id2: Int!) {
   course1: course(id: $id) {
     ...fields
@@ -26,19 +28,23 @@ query getCoursesFragment($id: Int!, $id2: Int!) {
     ...fields
   }
 }
+```
 
-#Mutation (hacer updates o saves)
+##Mutation (hacer updates o saves)
+```
 mutation updateCourseTopic($idT: Int!, $topicT: String!) {
   updateCourseTopic(id: $idT, topic: $topicT) {
     ...fields
   }
 }
+```
 
-#Fragments
+##Fragments
+```
 fragment fields on Course {
   title
   author
   topic
   url
 }
-
+```
