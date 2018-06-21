@@ -48,3 +48,16 @@ fragment fields on Course {
   url
 }
 ```
+
+# Query Variables
+
+```
+{
+  "courseId": 1,
+  "topic": "JavaScript",
+  "id": 1,
+  "id2": 2,
+  "idT": 1,
+  "topicT": "Java Mentolado"
+}
+```
